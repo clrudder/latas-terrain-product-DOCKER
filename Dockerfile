@@ -24,13 +24,13 @@ RUN \
 # application directory
 COPY app_root/ app
 # Loads the GBDX task operation structure to the docker container
-#COPY mnt/ /mnt
-RUN mkdir /data
+COPY mnt/ /mnt
+#RUN mkdir /data
 
 # Loads entry point, sets interactive
 ## Use this as entry point for interactive docker container
-COPY ./docker-entrypoint.sh /
-ENTRYPOINT ["/docker-entrypoint.sh"]
+#COPY ./docker-entrypoint.sh /
+#ENTRYPOINT ["/docker-entrypoint.sh"]
 # Runs /bin/bash on container entry
 CMD ["/bin/bash"]
 

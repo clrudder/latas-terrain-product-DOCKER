@@ -125,11 +125,11 @@ def main(input_dir, out_dir, srtm_path, tmp_dir):
             print "GROUP DICT : ", group_dict
             print "Group files built. Constructing stitched strips"
             #Iterate through groups and stitch the tiles to the file stitch
-            for group, stitchFile in group_dict.iteritems():
+            for groupFile, stitchFile in group_dict.iteritems():
                 if os.path.exists(stitchFile):
                     os.remove(stitchFile)
-                pci.nspio.Logger.logEvent("Group: {}, Stitch: {}".format(group, stitchFile))
-                stitch_strips(group, stitchFile)
+                pci.nspio.Logger.logEvent("Group: {}, Stitch: {}".format(groupFile, stitchFile))
+                stitch_strips(groupFile, stitchFile)
                 
         ## Create OrthoEngine project file to store project data
         img_files = os.path.join(img_dir, "*.pix")
@@ -282,14 +282,12 @@ def epi_images(img_dir, epiImages_dir):
                              "0", "ALL", [5], 
                              [1], epiImages_dir, 
                              [-9999], "", "", [])
-        print "EPIPOLAR IMAGE CREATION COMPLETE"
-        #pci.nspio.Logger.logEvent('Epipolar image creation Complete')
+        pci.nspio.Logger.logEvent('Epipolar image creation Complete')
         
     except PCIException, e:
-        #pci.nspio.Logger.logEvent(str(e))
+        pci.nspio.Logger.logEvent(str(e))
         err = "Epipolar image creation failed. Try again..."
-        print err
-        #pci.nspio.Logger.logEvent(err)
+        pci.nspio.Logger.logEvent(err)
         jw.failure(err)
         sys.exit(0)  
     

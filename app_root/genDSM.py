@@ -77,7 +77,7 @@ def process(inputdir, outputdir, tmp_dir):
 #Below i for processing command line inputs
 if __name__ == "__main__":
     'variables for running locally'
-#    directory = r'E:\DSM\Raleigh\0934111'
+#    directory = r'E:\DSM\Raleigh\162744'
 #    inputdir = os.path.join(directory,'pair')
 #    outputdir = os.path.join(directory,'out')
 #    tmp_dir = os.path.join(directory,'temp')
