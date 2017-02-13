@@ -1,6 +1,6 @@
 #!/bin/bash
 
-IMAGE=precisionhawk/gbdx-derive-dsm-test
+IMAGE=geomatica/gbdx-derive-dsm-codetest
 VERSION=0.01
 
 # Copy over latest version of Geomatica DSM automation script
