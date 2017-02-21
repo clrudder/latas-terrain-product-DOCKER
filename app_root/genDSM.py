@@ -77,18 +77,18 @@ def process(inputdir, outputdir, tmp_dir):
 #Below i for processing command line inputs
 if __name__ == "__main__":
     'variables for running locally'
-#    directory = r'E:\DSM\Raleigh\162744'
-#    inputdir = os.path.join(directory,'pair')
-#    outputdir = os.path.join(directory,'out')
-#    tmp_dir = os.path.join(directory,'temp')
-#    input_files = [inputdir, outputdir, tmp_dir]
-    input_files=[]
-    if len(sys.argv) == 4:
-        input_files.append(str(sys.argv[1]))    # path to stereo pair folder 
-        input_files.append(str(sys.argv[2]))    # path to output directory
-        input_files.append(str(sys.argv[3]))    # path to SRTM
-    else:
-        usage()
+    directory = r'E:\DSM\Corpus\working'
+    inputdir = os.path.join(directory,'input')
+    outputdir = os.path.join(directory,'output')
+    tmp_dir = os.path.join(directory,'temp')
+    input_files = [inputdir, outputdir, tmp_dir]
+#    input_files=[]
+#    if len(sys.argv) == 4:
+#        input_files.append(str(sys.argv[1]))    # path to stereo pair folder 
+#        input_files.append(str(sys.argv[2]))    # path to output directory
+#        input_files.append(str(sys.argv[3]))    # path to SRTM
+#    else:
+#        usage()
 
     process(input_files[0], input_files[1], input_files[2])
 

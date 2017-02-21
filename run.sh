@@ -10,7 +10,7 @@ docker rm $NAME
 docker run \
   --volume /E_DRIVE/DSM/Corpus/working/input/:/mnt/work/input/ \
   --volume /E_DRIVE/DSM/Corpus/working/output/:/mnt/work/output/ \
-  --volume /E_DRIVE/DSM/Corpus/working/temp/:/mnt/work/temp/ \
+  --volume /E_DRIVE/DSM/Corpus/working/temp/:/mnt/work/tmp/ \
   --name $NAME \
   $IMAGE
 

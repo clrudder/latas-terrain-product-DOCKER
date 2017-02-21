@@ -28,9 +28,7 @@ def find_shapefiles(folder):
     return shapes
 
 def orientation(shp):
-    ds = ogr.Open(shp)  
-    lyr = ds.GetLayer()
-    minX, maxX, minY, maxY = lyr.GetExtent()
+    minX, maxX, minY, maxY = shp_extent(shp)
     lenX = abs(minX - maxX)
     lenY = abs(minY - maxY)
     if lenX > lenY:
